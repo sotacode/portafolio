@@ -1,29 +1,34 @@
 import NextLink from "next/link";
 import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon, InstagramIcon, LinkedInIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
+import { Presentation } from "@/components/home/presentation";
+import { Divider } from "@nextui-org/react";
+import SectionHome from "@/layouts/sectionhome";
+import { Technologies } from "@/components/home/technologies";
 
 export default function IndexPage() {
 	return (
 		<DefaultLayout>
-			<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-				<div className="inline-block max-w-lg text-center justify-center">
-					<h1 className={title()}>Hi!, i'am&nbsp;</h1>
-					<h1 className={title({ color: "cyan" })}>SotaCode&nbsp;</h1>
-					<br />
-					<h1 className={title()}>a&nbsp;</h1>
-					<h1 className={title({ color: "cyan" })}>Full Stack&nbsp;</h1>
-					<h1 className={title()}>developer</h1>
-					{/* <h4 className={subtitle({ class: "mt-4" })}>
-						Beautiful, fast and modern React UI library.
-					</h4> */}
+			<section className="w-full flex flex-col items-center justify-center">
+				
+				<Presentation />
+
+				<div className="w-1/3 pb-4">
+					<Divider />
 				</div>
 
+				<SectionHome>
+					<Technologies />
+				</SectionHome>
+
+
+				<div className="w-2/3 py-5">
+					<Divider />
+				</div>
 				<div className="flex gap-3">
 					{/* <Link
 						isExternal
