@@ -9,11 +9,12 @@ import { Presentation } from "@/components/home/presentation";
 import { Divider } from "@nextui-org/react";
 import SectionHome from "@/layouts/sectionhome";
 import { Technologies } from "@/components/home/technologies";
+import { Works } from "@/components/home/works";
 
 export default function IndexPage() {
 	return (
 		<DefaultLayout>
-			<section className="w-full flex flex-col items-center justify-center">
+			<section className="flex flex-col items-center justify-center">
 				
 				<Presentation />
 
@@ -29,7 +30,11 @@ export default function IndexPage() {
 				<div className="w-2/3 py-5">
 					<Divider />
 				</div>
-				<div className="flex gap-3">
+
+				<SectionHome>
+					<Works />
+				</SectionHome>
+				<div className="flex gap-3 mt-20">
 					{/* <Link
 						isExternal
 						as={NextLink}

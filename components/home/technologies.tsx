@@ -2,7 +2,9 @@ import React from 'react'
 import { subtitle, title } from '../primitives'
 import GridTechs from './gridtechs'
 
+
 export const Technologies = () => {
+
     return (
         <>
             <div>

@@ -9,12 +9,12 @@ export const Presentation = () => {
 		<div className='pb-20'>
 			<div className="flex-1 flex flex-col justify-center items-center">
 			<div className="text-center">
-				<h1 className={title({ size: "sm" })}>Hola!, soy&nbsp;</h1>
-				<h1 className={title({ color: "cyan" })}>Nelson Rivera</h1>
-				<h1 className={title({ size: "sm" })}>,</h1>
+				<h1 className={title({ size: "md" })}>Hola!, soy&nbsp;</h1>
+				<h1 className={title({ size: "lg", color: "cyan" })}>Nelson Rivera</h1>
+				<h1 className={title({ size: "md" })}>,</h1>
 				<br />
-				<h1 className={title({ size: "sm" })}>desarrollador&nbsp;</h1>
-				<h1 className={title({ color: "cyan", size: "sm" })}>Full-Stack&nbsp;</h1>
+				<h1 className={title({ size: "md" })}>desarrollador&nbsp;</h1>
+				<h1 className={title({ color: "cyan", size: "md" })}>Full-Stack&nbsp;</h1>
 				<h4 className={subtitle({ class: "mt-4" })}>
 				Un apasionado del desarrollo software en todas sus áreas.
 				</h4>
@@ -23,13 +23,13 @@ export const Presentation = () => {
 				<Image
 				src="/home/sotacode.png"
 				alt="Picture of the"
-				width={500}
-				height={500}
+				width={650}
+				height={650}
 				/>
 			</div>
 			</div>
-			<div className="w-full flex-1 flex-col items-center justify-center">
-			<div className="max-w-768px">
+			<div className="flex-1 flex-col items-center justify-center">
+			<div className="max-w-900px">
 				<img
 				src="/home/bottomimagebg.png"
 				alt="Picture of the author"
