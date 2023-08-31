@@ -13,11 +13,11 @@ import TableTechs from "./tabletechs";
 export default function GridTechs() {
   const { list, types } = technologies;
 
-  const { theme } = useTheme();
+  const { theme = 'dark' } = useTheme();
 
   return (
     <div className="w-1/6 sm:w-1/6 md:w-2/6 lg:w-2/6 xl:w-3/6 mx-auto mt-8 mb-10">
-      <div className="flex flex-col justify-center items-center mt-5 gap-2 z-20" style={{ marginTop: "-33px" }}>
+      <div className="flex flex-col justify-center items-center mt-5 gap-2 z-20 overflow-x-hidden" style={{ marginTop: "-33px" }}>
         <Marquee gradient gradientWidth={50} gradientColor={theme === "dark" ? [0, 0, 0] : [255, 255, 255]} style={{ pointerEvents: "none" }} className="z-10 relative">
           <div className="flex py-10">
             {list.map((item, index) => (
