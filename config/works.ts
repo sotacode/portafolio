@@ -3,6 +3,16 @@ export type SiteConfig = typeof works;
 export const works = {
     list: [
         {
+            key: "portfolio",
+            technologies: "Nextjs / NextUI / Tailwind",
+            title: "SotaCode Web",
+            resumen: "Es básicamente esta misma página, aquí muestro mis habilidades.",
+            detail: "",
+            url: "",
+            github: "https://github.com/sotacode/portafolio",
+            img: "/home/webpagesotacode.png",
+        },
+        {
             key: "heroesapp",
             technologies: "Reactjs / Vite",
             title: "Heroes App",
