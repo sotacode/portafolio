@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
 	name: "SotaCode",
-	description: "Make beautiful websites regardless of your design experience.",
+	description: "Hola!, Soy Nelson Rivera, aquí encontrarás mi perfil profesional donde muestro mis trabajos personales.",
 	navItems: [
 		{
 			label: "Home",

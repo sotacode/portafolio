@@ -10,6 +10,7 @@ import { Divider } from "@nextui-org/react";
 import SectionHome from "@/layouts/sectionhome";
 import { Technologies } from "@/components/home/technologies";
 import { Works } from "@/components/home/works";
+import { AboutMe } from "@/components/home/aboutme";
 
 export default function IndexPage() {
 	return (
@@ -23,11 +24,19 @@ export default function IndexPage() {
 				</div>
 
 				<SectionHome>
+					<AboutMe />
+				</SectionHome>
+
+				<div className="w-1/3 pb-4">
+					<Divider />
+				</div>
+
+				<SectionHome>
 					<Technologies />
 				</SectionHome>
 
 
-				<div className="w-2/3 py-5">
+				<div className="w-1/3 pt-5 pb-10">
 					<Divider />
 				</div>
 
