@@ -26,7 +26,7 @@ export const Presentation = () => {
 							</div>
 							:
 							<div className="text-center">
-								<h1 className={title({ size: "md" })}>Hello, I'm&nbsp;</h1>
+								<h1 className={title({ size: "md" })}>Hello, I&apos;m&nbsp;</h1>
 								<h1 className={title({ size: "lg", color: "cyan" })}>Nelson Rivera</h1>
 								<h1 className={title({ size: "md" })}>,</h1>
 								<br />
