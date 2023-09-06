@@ -1,20 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button, Card, CardBody, CardFooter, CardHeader, Image, Link } from "@nextui-org/react";
 import { title } from "../primitives";
 import { works } from "@/config/works";
 import { AiOutlineLink, AiFillGithub } from "react-icons/ai";
+import { LanguageContext } from "@/context/language/LanguageContext";
 
 
 export const Works = () => {
+    const { language } = useContext(LanguageContext);
     const { list } = works;
 
     return (
         <>
             <div className="flex-1 flex flex-col justify-center items-center ">
-                <div className="text-center">
-                    <h1 className={title({ size: "sm" })}>Mis&nbsp;</h1>
-                    <h1 className={title({ color: "cyan" })}>Trabajos&nbsp;</h1>
-                </div>
+                {
+                    language == "ES" ?
+                        <div className="text-center">
+                            <h1 className={title({ size: "sm" })}>Mis&nbsp;</h1>
+                            <h1 className={title({ color: "cyan" })}>Trabajos&nbsp;</h1>
+                        </div>
+                        :
+                        <div className="text-center">
+                            <h1 className={title({ size: "sm" })}>My&nbsp;</h1>
+                            <h1 className={title({ color: "cyan" })}>Work&nbsp;</h1>
+                        </div>
+                }
             </div>
             <div className="gap-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 my-8 flex justify-center">
                 {list.map((item, index) => (
@@ -32,7 +42,7 @@ export const Works = () => {
                         <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
                             <div className="flex flex-grow gap-2 items-center">
                                 <div className="flex flex-col">
-                                    <p className="text-tiny text-white/60">{item.resumen}</p>
+                                    <p className="text-tiny text-white/60">{item.resumen[language]}</p>
                                 </div>
                             </div>
                             <div className="flex flex-grow gap-2 items-center">

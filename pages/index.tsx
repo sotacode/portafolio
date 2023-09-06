@@ -14,7 +14,7 @@ import { AboutMe } from "@/components/home/aboutme";
 
 export default function IndexPage() {
 	return (
-		<DefaultLayout>
+		<>
 			<section className="flex flex-col items-center justify-center">
 				
 				<Presentation />
@@ -53,6 +53,6 @@ export default function IndexPage() {
 					</Snippet>
 				</div> */}
 			</section>
-		</DefaultLayout>
+		</>
 	);
 }

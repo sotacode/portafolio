@@ -3,62 +3,34 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
 	name: "SotaCode",
 	description: "Hola!, Soy Nelson Rivera, aquí encontrarás mi perfil profesional donde muestro mis trabajos personales.",
-	navItems: [
-		{
-			label: "Home",
-			href: "/",
+	texts: {
+		resume: {
+			ES: "Un apasionado del desarrollo software en todas sus áreas.",
+			EN: "A passionate software developer in all its aspects."
 		},
-    {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    }
-	],
-	navMenuItems: [
-		{
-			label: "Profile",
-			href: "/profile",
+		aboutMe: {
+			one: {
+				ES: "Soy un apasionado desarrollador full-stack con 2 años de experiencia profesional en el mundo del desarrollo de software.",
+				EN: "I'm a passionate full-stack developer with 2 years of professional experience in the world of software development."
+			},
+			two: {
+				ES: "Siempre me he considerado una persona a la que le encanta explorar diferentes áreas y herramientas dentro de este emocionante campo.",
+				EN: "I've always considered myself a person who loves to explore different areas and tools within this exciting field."
+			},
+			three: {
+				ES: "Tengo la capacidad de adaptarme con facilidad a distintos entornos, siempre con el objetivo de seguir creciendo.",
+				EN: "I have the ability to easily adapt to different environments, always with the goal of continuous growth."
+			},
+			four: {
+				ES: "Cuando no estoy inmerso en líneas de código, me gusta desconectar haciendo ejercicio, jugando videojuegos y disfrutar con mis amigos. ¡Después de todo, el equilibrio es clave!.",
+				EN: "When I'm not immersed in lines of code, I like to unwind by exercising, playing video games, and enjoying time with my friends. After all, balance is key!"
+			},
 		},
-		{
-			label: "Dashboard",
-			href: "/dashboard",
-		},
-		{
-			label: "Projects",
-			href: "/projects",
-		},
-		{
-			label: "Team",
-			href: "/team",
-		},
-		{
-			label: "Calendar",
-			href: "/calendar",
-		},
-		{
-			label: "Settings",
-			href: "/settings",
-		},
-		{
-			label: "Help & Feedback",
-			href: "/help-feedback",
-		},
-		{
-			label: "Logout",
-			href: "/logout",
-		},
-	],
+		createdBy: {
+			ES: "Creado por",
+			EN: "Created by"
+		}
+	},
 	links: {
 		github: "https://github.com/sotacode",
 		twitter: "https://twitter.com/getnextui",

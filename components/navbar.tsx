@@ -1,62 +1,41 @@
 import {
-	Button,
-	Kbd,
-	Link,
-	Input,
 	Navbar as NextUINavbar,
 	NavbarContent,
-	NavbarMenu,
-	NavbarMenuToggle,
 	NavbarBrand,
 	NavbarItem,
-	NavbarMenuItem,
+	Select,
+	SelectItem,
 } from "@nextui-org/react";
 
-import { link as linkStyles } from "@nextui-org/theme";
 
-import { siteConfig } from "@/config/site";
+
+
 import NextLink from "next/link";
-import clsx from "clsx";
+
 
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
-	TwitterIcon,
-	GithubIcon,
-	DiscordIcon,
-	HeartFilledIcon,
-	SearchIcon,
-	LinkedInIcon,
-	InstagramIcon,
-	SotaCodeIcon,
-} from "@/components/icons";
+
 
 import { Logo } from "@/components/icons";
 import { LogoSotaCode } from "./logosotacode";
+import { useContext, useState } from "react";
+import { LanguageContext } from "@/context/language/LanguageContext";
+import { setLocalStorageLanguage } from "@/utils/localStorage";
 
 export const Navbar = () => {
-	const searchInput = (
-		<Input
-			aria-label="Search"
-			classNames={{
-				inputWrapper: "bg-default-100",
-				input: "text-sm",
-			}}
-			endContent={
-				<Kbd className="hidden lg:inline-block" keys={["command"]}>
-					K
-				</Kbd>
-			}
-			labelPlacement="outside"
-			placeholder="Search..."
-			startContent={
-				<SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-			}
-			type="search"
-		/>
-	);
+	const { language: ctxLanguage, changeLanguage } = useContext(LanguageContext)
+	const [languageSelected, setLanguageSelected] = useState(new Set<string>(["ES"]));
+	const handleSelectionChange = (e: any) => {
+		//console.log(e.target.value)
+		if (e.target.value !== "") {
+			changeLanguage(e.target.value)
+			setLanguageSelected(new Set<string>([e.target.value]));
+			setLocalStorageLanguage(e.target.value);
+		}
+	};
 
 	return (
-		<NextUINavbar maxWidth="xl" position="sticky">
+		<NextUINavbar maxWidth="xl" shouldHideOnScroll>
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<NavbarBrand className="gap-3 max-w-fit">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
@@ -86,29 +65,63 @@ export const Navbar = () => {
 			<NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
 
 				<NavbarItem className="hidden sm:flex gap-2">
-					{/* <Link isExternal href={siteConfig.links.linkedin}>
-						<LinkedInIcon className="text-default-500" />
-					</Link>
-					<Link isExternal href={siteConfig.links.instagram}>
-						<InstagramIcon className="text-default-500" />
-					</Link>
-					<Link isExternal href={siteConfig.links.github}>
-						<GithubIcon className="text-default-500" />
-					</Link> */}
+					<Select
+						className="min-w-[70px]"
+						aria-label="idioma"
+						labelPlacement="outside-left"
+						defaultSelectedKeys={["esES"]}
+						selectedKeys={languageSelected}
+						onChange={handleSelectionChange}
+					>
+						<SelectItem
+							key="ES"
+							textValue="ES"
+						>
+							ES
+						</SelectItem>
+						<SelectItem
+							key="EN"
+							textValue="EN"
+						>
+							EN
+						</SelectItem>
+
+					</Select>
 					<ThemeSwitch />
 				</NavbarItem>
-				{/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
 			</NavbarContent>
 
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
 				{/* <Link isExternal href={siteConfig.links.github}>
 					<GithubIcon className="text-default-500" />
 				</Link> */}
+				<Select
+					className="max-w-[130px]"
+					aria-label="idioma"
+					labelPlacement="outside-left"
+					defaultSelectedKeys={["esES"]}
+					selectedKeys={languageSelected}
+					onChange={handleSelectionChange}
+				>
+					<SelectItem
+						key="ES"
+						textValue="ES"
+					>
+						ES
+					</SelectItem>
+					<SelectItem
+						key="EN"
+						textValue="EN"
+					>
+						EN
+					</SelectItem>
+
+				</Select>
 				<ThemeSwitch />
-				<NavbarMenuToggle />
+				{/* <NavbarMenuToggle /> */}
 			</NavbarContent>
 
-			<NavbarMenu>
+			{/* <NavbarMenu>
 				<div className="mx-4 mt-2 flex flex-col gap-2">
 					<NavbarMenuItem>
 						<Link
@@ -129,7 +142,7 @@ export const Navbar = () => {
 						</Link>
 					</NavbarMenuItem>
 				</div>
-				{/* {searchInput}
+				{searchInput}
 				<div className="mx-4 mt-2 flex flex-col gap-2">
 					{siteConfig.navMenuItems.map((item, index) => (
 						<NavbarMenuItem key={`${item}-${index}`}>
@@ -148,8 +161,8 @@ export const Navbar = () => {
 							</Link>
 						</NavbarMenuItem>
 					))}
-				</div> */}
-			</NavbarMenu>
+				</div>
+			</NavbarMenu> */}
 		</NextUINavbar>
 	);
 };
