@@ -3,6 +3,19 @@ export type SiteConfig = typeof works;
 export const works = {
     list: [
         {
+            key: "ValorantInfo",
+            technologies: "Nextjs / NextUI / Tailwind",
+            title: "Valorant Info",
+            resumen: {
+                ES: "Visualización de información del juego Valorant de Riot Games consumiendo VALORANT-API.",
+                EN: "Visualization of Valorant game information from Riot Games using the VALORANT-API."
+            },
+            detail: "",
+            url: "https://sotacode-valorantinfo.vercel.app/",
+            github: "https://github.com/sotacode/valorantinfo",
+            img: "/home/valoinfo.png",
+        },
+        {
             key: "portfolio",
             technologies: "Nextjs / NextUI / Tailwind",
             title: "SotaCode Web",
