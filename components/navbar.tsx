@@ -24,7 +24,7 @@ import { setLocalStorageLanguage } from "@/utils/localStorage";
 
 export const Navbar = () => {
 	const { language: ctxLanguage, changeLanguage } = useContext(LanguageContext)
-	const [languageSelected, setLanguageSelected] = useState(new Set<string>(["ES"]));
+	const [languageSelected, setLanguageSelected] = useState(new Set<string>(["EN"]));
 	const handleSelectionChange = (e: any) => {
 		//console.log(e.target.value)
 		if (e.target.value !== "") {
@@ -69,7 +69,7 @@ export const Navbar = () => {
 						className="min-w-[70px]"
 						aria-label="idioma"
 						labelPlacement="outside-left"
-						defaultSelectedKeys={["esES"]}
+						defaultSelectedKeys={["enUS"]}
 						selectedKeys={languageSelected}
 						onChange={handleSelectionChange}
 					>
@@ -99,7 +99,7 @@ export const Navbar = () => {
 					className="max-w-[130px]"
 					aria-label="idioma"
 					labelPlacement="outside-left"
-					defaultSelectedKeys={["esES"]}
+					defaultSelectedKeys={["US"]}
 					selectedKeys={languageSelected}
 					onChange={handleSelectionChange}
 				>

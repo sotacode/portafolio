@@ -7,7 +7,7 @@ import { LanguageContext } from '@/context/language/LanguageContext';
 export const Presentation = () => {
 	const { language } = useContext(LanguageContext);
 	return (
-		<div className="flex flex-col justify-center items-center h-screen">
+		<div className="flex flex-col justify-center items-center">
 			{/* Contenedor superior */}
 			<div className='pb-20'>
 				<div className="flex-1 flex flex-col justify-center items-center">

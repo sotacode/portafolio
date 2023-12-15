@@ -8,7 +8,7 @@ export interface LanguageState {
 }
 
 const LANGUAGE_INITIAL_STATE: LanguageState = {
-    language: 'ES'
+    language: 'EN'
 }
 
 
@@ -21,8 +21,8 @@ export default function LanguageProvider({ children }: { children: React.ReactNo
     useEffect(() => {
         const currentLanguage= getLocalStorageLanguage();
         if(currentLanguage==null){
-            setLocalStorageLanguage("ES")
-            dispatch({type: 'ES'})
+            setLocalStorageLanguage("EN")
+            dispatch({type: 'EN'})
         }else{
             dispatch({type: currentLanguage})
         }
