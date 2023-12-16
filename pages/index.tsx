@@ -11,8 +11,15 @@ import SectionHome from "@/layouts/sectionhome";
 import { Technologies } from "@/components/home/technologies";
 import { Works } from "@/components/home/works";
 import { AboutMe } from "@/components/home/aboutme";
+import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
 export default function IndexPage() {
+	const { theme, setTheme } = useTheme();
+	useEffect(() => {
+		setTheme("dark");
+	}, [])
+	
 	return (
 		<>
 			<section className="flex flex-col items-center justify-center">
