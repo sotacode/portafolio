@@ -41,11 +41,11 @@ export default function GridTechs() {
           </div>
         </Marquee>
       </div>
-      <div className="max-w-2xl flex flex-col justify-start mt-4 mx-auto">
+      {/* <div className="max-w-2xl flex flex-col justify-start mt-4 mx-auto">
         <div className="flex-1 flex flex-col w-90">
             <TableTechs/>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

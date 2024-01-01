@@ -47,7 +47,7 @@ export const Presentation = () => {
 						/>
 					</div>
 				</div>
-				<div className="flex-1 flex-col items-center justify-center">
+				{/* <div className="flex-1 flex-col items-center justify-center">
 					<div className="max-w-900px">
 						<img
 							src="/home/bottomimagebg.png"
@@ -55,7 +55,7 @@ export const Presentation = () => {
 							className="w-full"
 						/>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);

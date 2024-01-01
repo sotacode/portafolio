@@ -23,7 +23,7 @@ export const siteConfig = {
 			},
 			four: {
 				ES: "Cuando no estoy inmerso en líneas de código, me gusta desconectar haciendo ejercicio, jugando videojuegos y disfrutar con mis amigos. ¡Después de todo, el equilibrio es clave!.",
-				EN: "When I'm not immersed in lines of code, I like to unwind by exercising, playing video games, and enjoying time with my friends. After all, balance is key!"
+				EN: "When I'm not immersed in lines of code, I like to unwind by exercising and enjoying time with my friends. After all, balance is key!"
 			},
 		},
 		createdBy: {
@@ -40,4 +40,38 @@ export const siteConfig = {
 		linkedin: "https://www.linkedin.com/in/nelson-rivera-navarrete/",
     sponsor: "https://patreon.com/jrgarciadev"
 	},
+	form: {
+		ES: {
+			name: "Nombre",
+			namePlaceholder: "Escribe tu Nombre",
+			errorName: "Nombre es requerido",
+			email: "Correo",
+			emailPlaceholder: "Escribe tu Correo",
+			errorEmail: "Correo es requerido",
+			subject: "Asunto",
+			subjectPlaceholder: "Escribe tu Asunto",
+			errorSubject: "Asunto es requerido",
+			description: "Descripción",
+			descriptionPlaceholder: "Escriba la razon de su contacto",
+			errorDescription: "Descripción es requerido",
+			send: "Enviar",
+			errorToSend: "Error",
+		},
+		EN: {
+			name: "Name",
+			namePlaceholder: "Type your Name",
+			errorName: "Name is required",
+			email: "Email",
+			emailPlaceholder: "Type your Email",
+			errorEmail: "Email is required",
+			subject: "Subject",
+			subjectPlaceholder: "Type your Subject",
+			errorSubject: "Subject is required",
+			description: "Description",
+			descriptionPlaceholder: "Type the reason for your contact",
+			errorDescription: "Description is required",
+			send: "Send",
+			errorToSend: "Error",
+		}
+	}
 };
