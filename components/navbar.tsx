@@ -16,7 +16,7 @@ import NextLink from "next/link";
 import { ThemeSwitch } from "@/components/theme-switch";
 
 
-import { Logo } from "@/components/icons";
+import { Logo, SotaCodeIcon } from "@/components/icons";
 import { LogoSotaCode } from "./logosotacode";
 import { useContext, useState } from "react";
 import { LanguageContext } from "@/context/language/LanguageContext";
@@ -41,7 +41,7 @@ export const Navbar = () => {
 					<NextLink className="flex justify-start items-center gap-1" href="/">
 						<Logo />
 						{/* <SotaCodeIcon /> */}
-						<LogoSotaCode />
+						{/* <LogoSotaCode /> */}
 					</NextLink>
 				</NavbarBrand>
 				{/* <div className="hidden lg:flex gap-4 justify-start ml-2">

@@ -23,17 +23,13 @@ export function validateEmail(email: string): boolean {
 
 export function validateForm(form: FormContact): any {
   //quita los espacios en blancos de cada campo
-  form.name = form.name.trim();
-  form.email = form.email.trim();
-  form.subject = form.subject.trim();
-  form.description = form.description.trim();
 
   const {name, email, subject, description} = form;
 
   return {
-    name: name === "" ? false : true,
-    email: email === "" || !validateEmail(email) ? false : true,
-    subject: subject === "" ? false : true,
-    description: description === "" ? false : true,
+    name: name.trim() === "" ? false : true,
+    email: email.trim() === "" || !validateEmail(email) ? false : true,
+    subject: subject.trim() === "" ? false : true,
+    description: description.trim() === "" ? false : true,
   };
 }

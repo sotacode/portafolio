@@ -1,9 +1,11 @@
 import { LanguageContext } from '@/context/language/LanguageContext';
-import { Button, Input, Textarea } from '@nextui-org/react'
+import { Button, Input, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, Spinner, Textarea, useDisclosure } from '@nextui-org/react'
 import React, { useContext, useEffect, useState } from 'react'
 import { siteConfig } from '../config/site';
 import { FormContact } from '@/types';
 import { validateForm } from '@/utils/common';
+import { FaRegCheckCircle } from "react-icons/fa";
+import { FaRegTimesCircle } from "react-icons/fa";
 
 export const Form = () => {
   const { form } = siteConfig;
@@ -16,13 +18,16 @@ export const Form = () => {
   });
   const [submitAvailable, setSubmitAvailable] = useState<Boolean>(false);
   const [isLoading, setIsLoading] = useState(false)
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [thereIsError, setThereIsError] = useState(false)
+
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    setIsLoading(true);
     const validates = validateForm(contact);
     setSubmitAvailable(true);
     if (validates.name && validates.email && validates.subject && validates.description) {
+      setIsLoading(true);
       try {
         fetch('https://wixb9n2fa4.execute-api.us-east-1.amazonaws.com/send-email', {
           method: 'POST',
@@ -41,17 +46,22 @@ export const Form = () => {
               description: '',
             });
             setSubmitAvailable(false);
+            setThereIsError(false);
+            onOpen();
+            setIsLoading(false);
           })
           .catch((error) => {
             console.error('Error:', error);
+            setThereIsError(true);
             setIsLoading(false);
           });
       } catch (error) {
         console.log(error);
+        setThereIsError(true);
+        onOpen();
         setIsLoading(false);
       }
     }
-    setIsLoading(false);
   }
   return (
     <div className='mt-7'>
@@ -108,10 +118,38 @@ export const Form = () => {
         />
       </div>
       <div className="w-full flex flex-col gap-2 my-3">
-        <Button color='primary' className="w-full py-2 px-4 rounded" onClick={handleSubmit} isLoading={isLoading}>
-          {form[language].send}
+        <Button color='primary' className="w-full py-2 px-4 rounded" onClick={handleSubmit}>
+          {isLoading ? <Spinner color="warning" className='' /> : form[language].send}
         </Button>
       </div>
+      <>
+        <Modal backdrop="blur" isOpen={isOpen} onClose={onClose}>
+          <ModalContent>
+            {(onClose) => (
+              <>
+                <ModalBody className='text-center justify-center'>
+                  <p className='text-2xl'>
+                    {!thereIsError ? form[language].modalMessage : form[language].modalErrorMesage}
+                  </p>
+                  <p className='text-xl'>
+                    {!thereIsError ? form[language].modalDescription : form[language].modalErrorDescription}
+                  </p>
+                  <div className='my-5'>
+                    {!thereIsError ? <FaRegCheckCircle color='green' size='200' className='mx-auto' /> : <FaRegTimesCircle color="red" size='200' className='mx-auto' />}
+                  </div>
+
+                </ModalBody>
+                <ModalFooter className='justify-center'>
+                  <Button color="primary" onPress={onClose}>
+                    {form[language].buttonCloseModal}
+                  </Button>
+                </ModalFooter>
+              </>
+            )}
+          </ModalContent>
+        </Modal>
+      </>
     </div>
+
   )
 }

@@ -56,6 +56,11 @@ export const siteConfig = {
 			errorDescription: "Descripción es requerido",
 			send: "Enviar",
 			errorToSend: "Error",
+			modalMessage: "Mensaje enviado con éxito",
+			modalDescription: "Me contactaré contigo lo antes posible.",
+			modalErrorMesage: "Error al enviar mensaje",
+			modalErrorDescription: "Por favor, inténtelo de nuevo más tarde o pruebe con otro medio de contacto.",
+			buttonCloseModal: "Cerrar"
 		},
 		EN: {
 			name: "Name",
@@ -72,6 +77,11 @@ export const siteConfig = {
 			errorDescription: "Description is required",
 			send: "Send",
 			errorToSend: "Error",
+			modalMessage: "Message sent successfully",
+			modalDescription: "I will contact you as soon as possible.",
+			modalErrorMesage: "Error sending message",
+			modalErrorDescription: "Please try again later or try another means of contact.",
+			buttonCloseModal: "Close"
 		}
 	}
 };
