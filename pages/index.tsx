@@ -53,13 +53,13 @@ export default function IndexPage() {
 					<Works />
 				</SectionHome>
 
-				{/* <div className="w-1/3 pt-5 pb-10">
+				<div className="w-1/3 pt-5 pb-10">
 					<Divider />
 				</div>
 				
 				<SectionHome>
 					<TimelineExperience />
-				</SectionHome>	 */}
+				</SectionHome>	
 
 				<div className="w-1/3 pt-5 pb-10">
 					<Divider />
