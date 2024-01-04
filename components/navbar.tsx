@@ -5,6 +5,11 @@ import {
 	NavbarItem,
 	Select,
 	SelectItem,
+	Button,
+	Link,
+	NavbarMenuToggle,
+	NavbarMenu,
+	NavbarMenuItem,
 } from "@nextui-org/react";
 
 
@@ -16,17 +21,18 @@ import NextLink from "next/link";
 import { ThemeSwitch } from "@/components/theme-switch";
 
 
-import { Logo, SotaCodeIcon } from "@/components/icons";
-import { LogoSotaCode } from "./logosotacode";
+import { Logo } from "@/components/icons";
 import { useContext, useState } from "react";
 import { LanguageContext } from "@/context/language/LanguageContext";
 import { setLocalStorageLanguage } from "@/utils/localStorage";
+import { IoMdDownload } from "react-icons/io";
+import { siteConfig } from "@/config/site";
+
 
 export const Navbar = () => {
 	const { language: ctxLanguage, changeLanguage } = useContext(LanguageContext)
 	const [languageSelected, setLanguageSelected] = useState(new Set<string>(["EN"]));
 	const handleSelectionChange = (e: any) => {
-		//console.log(e.target.value)
 		if (e.target.value !== "") {
 			changeLanguage(e.target.value)
 			setLanguageSelected(new Set<string>([e.target.value]));
@@ -34,14 +40,17 @@ export const Navbar = () => {
 		}
 	};
 
+	const handleDownloadResume = async () => {
+		//download pdf from s3 using fetch
+		const res = await fetch('https://wixb9n2fa4.execute-api.us-east-1.amazonaws.com/get-resume');
+	}
+
 	return (
 		<NextUINavbar maxWidth="xl" shouldHideOnScroll>
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<NavbarBrand className="gap-3 max-w-fit">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
 						<Logo />
-						{/* <SotaCodeIcon /> */}
-						{/* <LogoSotaCode /> */}
 					</NextLink>
 				</NavbarBrand>
 				{/* <div className="hidden lg:flex gap-4 justify-start ml-2">
@@ -65,8 +74,13 @@ export const Navbar = () => {
 			<NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
 
 				<NavbarItem className="hidden sm:flex gap-2">
+					<Link href="https://wixb9n2fa4.execute-api.us-east-1.amazonaws.com/get-resume" isExternal>
+						<Button color="primary" startContent={<IoMdDownload />}>
+							<p>{siteConfig.download[ctxLanguage]}</p>
+						</Button>
+					</Link>
 					<Select
-						className="min-w-[70px]"
+						className="min-w-[70px] max-w-[70px]"
 						aria-label="idioma"
 						labelPlacement="outside-left"
 						defaultSelectedKeys={["enUS"]}
@@ -95,8 +109,8 @@ export const Navbar = () => {
 				{/* <Link isExternal href={siteConfig.links.github}>
 					<GithubIcon className="text-default-500" />
 				</Link> */}
-				<Select
-					className="max-w-[130px]"
+				{/* <Select
+					className="min-w-[70px] max-w-[70px]"
 					aria-label="idioma"
 					labelPlacement="outside-left"
 					defaultSelectedKeys={["US"]}
@@ -117,52 +131,64 @@ export const Navbar = () => {
 					</SelectItem>
 
 				</Select>
-				<ThemeSwitch />
-				{/* <NavbarMenuToggle /> */}
+				<ThemeSwitch /> */}
+				<NavbarMenuToggle />
 			</NavbarContent>
 
-			{/* <NavbarMenu>
+			<NavbarMenu>
 				<div className="mx-4 mt-2 flex flex-col gap-2">
-					<NavbarMenuItem>
-						<Link
-							color={"foreground"}
-							href="#"
-							size="lg"
-						>
-							algo1
-						</Link>
-					</NavbarMenuItem>
-					<NavbarMenuItem>
-						<Link
-							color={"foreground"}
-							href="#"
-							size="lg"
-						>
-							algo2
-						</Link>
-					</NavbarMenuItem>
-				</div>
-				{searchInput}
-				<div className="mx-4 mt-2 flex flex-col gap-2">
-					{siteConfig.navMenuItems.map((item, index) => (
-						<NavbarMenuItem key={`${item}-${index}`}>
-							<Link
-								color={
-									index === 2
-										? "primary"
-										: index === siteConfig.navMenuItems.length - 1
-											? "danger"
-											: "foreground"
-								}
-								href="#"
-								size="lg"
-							>
-								{item.label}
+					<div className="w-full flex justify-center items-center">
+						<div className="basis-1/3 text-center">
+							<Link href="https://wixb9n2fa4.execute-api.us-east-1.amazonaws.com/get-resume" isExternal>
+								<Button color="primary" startContent={<IoMdDownload />}>
+									<p>{siteConfig.download[ctxLanguage]}</p>
+								</Button>
 							</Link>
-						</NavbarMenuItem>
-					))}
+						</div>
+						<div className="basis-1/3 text-center">
+							<Select
+								className="min-w-[70px] max-w-[70px]"
+								aria-label="idioma"
+								labelPlacement="outside-left"
+								defaultSelectedKeys={["US"]}
+								selectedKeys={languageSelected}
+								onChange={handleSelectionChange}
+							>
+								<SelectItem
+									key="ES"
+									textValue="ES"
+								>
+									ES
+								</SelectItem>
+								<SelectItem
+									key="EN"
+									textValue="EN"
+								>
+									EN
+								</SelectItem>
+
+							</Select>
+						</div>
+						<div className="basis-1/3 text-center">
+							<ThemeSwitch />
+						</div>
+					</div>
+					<NavbarMenuItem>
+
+					</NavbarMenuItem>
+					<NavbarMenuItem>
+
+					</NavbarMenuItem>
 				</div>
-			</NavbarMenu> */}
+				{/* {searchInput} */}
+				{/* <div className="mx-4 mt-2 flex flex-col gap-2">
+					<NavbarMenuItem>
+						<Link>
+							aaa
+						</Link>
+					</NavbarMenuItem>
+				</div> */}
+			</NavbarMenu>
 		</NextUINavbar>
 	);
 };

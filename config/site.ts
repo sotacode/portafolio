@@ -83,5 +83,9 @@ export const siteConfig = {
 			modalErrorDescription: "Please try again later or try another means of contact.",
 			buttonCloseModal: "Close"
 		}
-	}
+	},
+	download: {
+		ES: "Curriculum",
+		EN: "Resume"
+	},
 };
