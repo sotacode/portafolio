@@ -16,36 +16,30 @@ export default function GridTechs() {
   const { theme = 'dark' } = useTheme();
 
   return (
-    <div className="w-1/6 sm:w-1/6 md:w-2/6 lg:w-2/6 xl:w-3/6 mx-auto mt-8 mb-10">
-      <div className="flex flex-col justify-center items-center mt-5 gap-2 z-20 overflow-x-hidden" style={{ marginTop: "-33px" }}>
-        <Marquee gradient gradientWidth={50} gradientColor={theme === "dark" ? [0, 0, 0] : [255, 255, 255]} style={{ pointerEvents: "none" }} className="z-10 relative">
-          <div className="flex py-10">
-            {list.map((item, index) => (
-              <Card shadow="sm" key={index} isPressable className="m-2 mt-0 mb-0">
-                <CardBody className="overflow-visible p-0 flex items-center justify-center">
-                  <Image
-                    shadow="none"
-                    radius="lg"
-                    alt={item.title}
-                    className="w-[120px] p-2 pb-0 object-cover"
-                    src={item.img}
-                    width={300}
-                  />
-                </CardBody>
-                <CardFooter className="flex justify-center text-small">
-                  <b>{item.title}</b>
-                  {/* <p className="text-default-500">{item.price}</p> */}
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-        </Marquee>
+
+      <div className="gap-2 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-7 my-10 flex justify-center">
+        {
+          list.map((item, index) => (
+                <div className="flex">
+                  <Card shadow="sm" key={index} isPressable className="m-1">
+                    <CardBody className="overflow-visible p-0 flex items-center justify-center">
+                      <Image
+                        shadow="none"
+                        radius="lg"
+                        alt={item.title}
+                        className="w-[120px] p-2 pb-0 object-cover"
+                        src={item.img}
+                        width={300}
+                      />
+                    </CardBody>
+                    <CardFooter className="flex justify-center text-small">
+                      <b>{item.title}</b>
+                    </CardFooter>
+                  </Card>
+                </div>
+          ))
+        }
       </div>
-      {/* <div className="max-w-2xl flex flex-col justify-start mt-4 mx-auto">
-        <div className="flex-1 flex flex-col w-90">
-            <TableTechs/>
-        </div>
-      </div> */}
-    </div>
+
   );
 }

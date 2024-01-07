@@ -50,7 +50,7 @@ export default function DefaultLayout({
 						<LinkedInIcon size={20} />
 						LinkedIn
 					</Link>
-					<Link
+					{/* <Link
 						isExternal
 						as={NextLink}
 						className={buttonStyles({ variant: "bordered", radius: "full" })}
@@ -58,7 +58,7 @@ export default function DefaultLayout({
 					>
 						<InstagramIcon size={20} />
 						Instagram
-					</Link>
+					</Link> */}
 					<Link
 						isExternal
 						as={NextLink}
