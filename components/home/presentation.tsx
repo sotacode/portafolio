@@ -3,6 +3,11 @@ import React from 'react'
 import { subtitle, title } from '../primitives'
 import { useContext } from 'react';
 import { LanguageContext } from '@/context/language/LanguageContext';
+import { Button, Link, Snippet } from '@nextui-org/react';
+import NextLink from 'next/link';
+import { GithubIcon, InstagramIcon, LinkedInIcon } from '../icons';
+import { button as buttonStyles } from "@nextui-org/theme";
+import { siteConfig } from '@/config/site';
 
 export const Presentation = () => {
 	const { language } = useContext(LanguageContext);
@@ -46,16 +51,34 @@ export const Presentation = () => {
 							height={650}
 						/>
 					</div>
-				</div>
-				{/* <div className="flex-1 flex-col items-center justify-center">
-					<div className="max-w-900px">
-						<img
-							src="/home/bottomimagebg.png"
-							alt="Picture of the author"
-							className="w-full"
-						/>
+					<div className='gap-2 w-full justify-center text-center items-center flex flex-col mt-4'>
+						<div className='w-full max-w-md mx-2 w-full justify-center text-center items-center flex flex-row'>
+							<Snippet variant="bordered" color='primary' className='mx-2 w-full'>sotacodework@gmail.com</Snippet>
+						</div>
+						<div className='w-full max-w-md flex flex-row'>
+							<Link
+								isExternal
+								as={NextLink}
+								href={siteConfig.links.linkedin}
+								className='mx-2 basis-1/2 w-full justify-center text-center items-center flex flex-row'
+							>
+								<Button color="primary" variant="bordered" className='w-full' startContent={<LinkedInIcon size={20} />}>
+									LinkedIn
+								</Button>
+							</Link>
+							<Link
+								isExternal
+								as={NextLink}
+								href={siteConfig.links.github}
+								className='mx-2 basis-1/2 w-full justify-center text-center items-center flex flex-row'
+							>
+								<Button color="primary" variant="bordered" className='w-full' startContent={<GithubIcon size={20} />}>
+									GitHub
+								</Button>
+							</Link>
+						</div>
 					</div>
-				</div> */}
+				</div>
 			</div>
 		</div>
 	);

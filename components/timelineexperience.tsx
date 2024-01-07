@@ -23,11 +23,11 @@ export const TimelineExperience = () => {
                         </div>
                 }
             </div>
-            <ol className="relative border-s border-gray-500">
+            <ol className="relative border-s border-slate-300 mx-1">
                 {
                     experience[language].map((work, index) => (
                         <li className="mb-10 ms-6" key={index}>
-                            <span className="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -start-3 ring-8 ring-gray-600">
+                            <span className="absolute flex items-center justify-center w-6 h-6 bg-slate-200 rounded-full -start-3 ring-8 ring-slate-200">
                                 <FaCalendarMinus color='#01cfea' size={20} />
                             </span>
                             <div className='flex text-center items-center'>
@@ -57,7 +57,7 @@ export const TimelineExperience = () => {
                                 work.technologies.length > 0 && <div className="flex flex-wrap gap-2 pl-3">
                                     {
                                         work.technologies.map((item, index) => (
-                                            <Chip key={index} color='primary' size='sm'>{item}</Chip>
+                                            <Chip key={index} color='primary' size='sm' variant='flat'>{item}</Chip>
                                         ))
                                     }
                                 </div>

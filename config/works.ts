@@ -1,10 +1,11 @@
+import { technologies } from './technologies';
 export type SiteConfig = typeof works;
 
 export const works = {
     list: [
         {
             key: "ValorantInfo",
-            technologies: "Nextjs / NextUI / Tailwind",
+            technologies: ["Nextjs","NextUI", "Tailwind"],
             title: "Valorant Info",
             resumen: {
                 ES: "Visualización de información del juego Valorant de Riot Games consumiendo VALORANT-API.",
@@ -17,7 +18,7 @@ export const works = {
         },
         {
             key: "portfolio",
-            technologies: "Nextjs / NextUI / Tailwind",
+            technologies: ["Nextjs","NextUI", "Tailwind"],
             title: "SotaCode Web",
             resumen: {
                 ES: "Es básicamente esta misma página, aquí muestro mis habilidades.",
@@ -30,7 +31,7 @@ export const works = {
         },
         {
             key: "heroesapp",
-            technologies: "Reactjs / Vite",
+            technologies: ["Reactjs", "Vite"],
             title: "Heroes App",
             resumen: {
                 ES: "Visualización de héroes y sitio con enrutamiento.",
@@ -43,7 +44,7 @@ export const works = {
         },
         {
             key: "sotagiphy",
-            technologies: "Reactjs / Vite",
+            technologies: ["Reactjs", "Vite"],
             title: "Sota Giphy",
             resumen: {
                 ES: "Despliegue de GIF's consumiendo API Giphy.",
@@ -56,7 +57,7 @@ export const works = {
         },
         {
             key: "localbd",
-            technologies: "Docker Compose",
+            technologies: ["Docker Compose", "Postgres", "pgAdmin"],
             title: "Postgres+pgAdmin Local",
             resumen: {
                 ES: "Levantamiento de base de datos Postgres y administrador de base de datos local en 1 linea de comando.",
@@ -69,7 +70,7 @@ export const works = {
         },
         {
             key: "learnreact",
-            technologies: "Reactjs / Vite",
+            technologies: ["Reactjs", "Vite"],
             title: "Learn React Hooks",
             resumen: {
                 ES: "Web donde se implementaron todos los hooks y algunos personalizados.",

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Button, Card, CardBody, CardFooter, CardHeader, Image, Link } from "@nextui-org/react";
+import { Button, Card, CardBody, CardFooter, CardHeader, Chip, Image, Link } from "@nextui-org/react";
 import { title } from "../primitives";
 import { works } from "@/config/works";
 import { AiOutlineLink, AiFillGithub } from "react-icons/ai";
@@ -30,7 +30,11 @@ export const Works = () => {
                 {list.map((item, index) => (
                     <Card isFooterBlurred key={index} className="bg-black/10 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100 w-[350px]">
                         <CardHeader className="bg-black/60 absolute z-10 flex-col items-start">
-                            <p className="text-tiny text-white/60 uppercase font-bold blur-none">{item.technologies}</p>
+                            <div>
+                                {item.technologies.map((item, index) => (
+                                    <Chip color="primary" key={index} size="sm" className="mr-2 text-sm" variant="flat">{item}</Chip>
+                                ))}
+                            </div>
                             <h4 className="text-white/90 font-medium text-xl blur-none">{item.title}</h4>
                         </CardHeader>
                         <Image
