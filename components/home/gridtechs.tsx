@@ -20,8 +20,8 @@ export default function GridTechs() {
       <div className="gap-2 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-7 my-10 flex justify-center">
         {
           list.map((item, index) => (
-                <div className="flex">
-                  <Card shadow="sm" key={index} isPressable className="m-1">
+                <div className="flex" key={index}>
+                  <Card shadow="sm" isPressable className="m-1">
                     <CardBody className="overflow-visible p-0 flex items-center justify-center">
                       <Image
                         shadow="none"
