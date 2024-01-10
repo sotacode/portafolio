@@ -5,6 +5,7 @@ import { GithubIcon, InstagramIcon, LinkedInIcon } from "@/components/icons";
 import { siteConfig } from "@/config/site";
 import { button as buttonStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
+import { tektur } from "@/components/fonts/fonts";
 
 export default function DefaultLayout({
 	children,
@@ -12,7 +13,7 @@ export default function DefaultLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<div className="flex flex-col">
+		<div className={`${tektur.className} antialiased flex flex-col`}>
 			<Head />
 			<Navbar />
 			<main className="container max-w-7xl px-6 flex-grow">

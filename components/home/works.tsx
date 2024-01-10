@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
-import { Button, Card, CardBody, CardFooter, CardHeader, Chip, Image, Link } from "@nextui-org/react";
+import { Card, CardFooter, CardHeader, Chip, Image, Link } from "@nextui-org/react";
 import { title } from "../primitives";
 import { works } from "@/config/works";
 import { AiOutlineLink, AiFillGithub } from "react-icons/ai";
 import { LanguageContext } from "@/context/language/LanguageContext";
+import NextImage from "next/image";
 
 
 export const Works = () => {
@@ -38,10 +39,11 @@ export const Works = () => {
                             <h4 className="text-white/90 font-medium text-xl blur-none">{item.title}</h4>
                         </CardHeader>
                         <Image
-                            removeWrapper
-                            alt="Relaxing app background"
-                            className="z-0 "
+                            as={NextImage}
+                            className="z-0"
                             src={item.img}
+                            width={500}
+                            height={500}
                         />
                         <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
                             <div className="flex flex-grow gap-2 items-center">

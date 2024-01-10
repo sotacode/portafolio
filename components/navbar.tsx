@@ -27,6 +27,7 @@ import { LanguageContext } from "@/context/language/LanguageContext";
 import { setLocalStorageLanguage } from "@/utils/localStorage";
 import { IoMdDownload } from "react-icons/io";
 import { siteConfig } from "@/config/site";
+import Image from "next/image";
 
 
 export const Navbar = () => {
@@ -45,7 +46,7 @@ export const Navbar = () => {
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<NavbarBrand className="gap-3 max-w-fit">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
-						<Logo />
+						<Image src="/nelsota.png" alt="nelsota" width={150} height={200}/>
 					</NextLink>
 				</NavbarBrand>
 			</NavbarContent>

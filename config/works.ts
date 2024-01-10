@@ -25,7 +25,7 @@ export const works = {
                 EN: "It's basically this same page where I showcase my skills."
             },
             detail: "",
-            url: "",
+            url: "https://www.nelsota.com/",
             github: "https://github.com/sotacode/portafolio",
             img: "/home/webpagesotacode.png",
         },
