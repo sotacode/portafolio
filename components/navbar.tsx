@@ -42,11 +42,11 @@ export const Navbar = () => {
 	};
 
 	return (
-		<NextUINavbar maxWidth="xl" shouldHideOnScroll>
+		<NextUINavbar maxWidth="xl" shouldHideOnScroll className="pt-2">
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<NavbarBrand className="gap-3 max-w-fit">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
-						<Image src="/nelsota.png" alt="nelsota" width={150} height={200}/>
+						<Image src="/sotacode.png" alt="nelsota" width={100} height={200}/>
 					</NextLink>
 				</NavbarBrand>
 			</NavbarContent>
