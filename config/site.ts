@@ -5,13 +5,13 @@ export const siteConfig = {
 	description: "Hola!, Soy Nelson Rivera, aquí encontrarás mi perfil profesional donde muestro mis trabajos personales.",
 	texts: {
 		resume: {
-			ES: "Un apasionado del desarrollo software en todas sus áreas.",
-			EN: "A passionate software developer in all its aspects."
+			ES: "Un apasionado del desarrollo software en todas sus áreas, dedicado a compartir mis conocimientos y experiencias.",
+			EN: "A passionate software developer in all aspects, dedicated to sharing my knowledge and experiences."
 		},
 		aboutMe: {
 			one: {
-				ES: "Soy un apasionado desarrollador full-stack con 2 años de experiencia profesional en el mundo del desarrollo de software.",
-				EN: "I'm a passionate full-stack developer with 2 years of professional experience in the world of software development."
+				ES: "Soy un apasionado desarrollador full-stack con 3 años de experiencia profesional en el mundo del desarrollo de software.",
+				EN: "I'm a passionate full-stack developer with 3 years of professional experience in the world of software development."
 			},
 			two: {
 				ES: "Siempre me he considerado una persona a la que le encanta explorar diferentes áreas y herramientas dentro de este emocionante campo.",
@@ -34,11 +34,10 @@ export const siteConfig = {
 	links: {
 		github: "https://github.com/sotacode",
 		twitter: "https://twitter.com/getnextui",
-		//docs: "https://nextui-docs-v2.vercel.app",
-		//discord: "https://discord.gg/9b6yyZKmH4",
+		youtube: "https://www.youtube.com/@SotaCode",
 		instagram: "https://www.instagram.com/sotacod/",
+		tiktok: "https://www.tiktok.com/@sota.code",
 		linkedin: "https://www.linkedin.com/in/nelson-rivera-navarrete/",
-    sponsor: "https://patreon.com/jrgarciadev"
 	},
 	form: {
 		ES: {

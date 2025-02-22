@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { LanguageContext } from '@/context/language/LanguageContext';
 import { Button, Link, Snippet } from '@nextui-org/react';
 import NextLink from 'next/link';
-import { GithubIcon, InstagramIcon, LinkedInIcon } from '../icons';
+import { GithubIcon, InstagramIcon, LinkedInIcon, YouTubeIcon } from '../icons';
 import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from '@/config/site';
 
@@ -13,7 +13,6 @@ export const Presentation = () => {
 	const { language } = useContext(LanguageContext);
 	return (
 		<div className="flex flex-col justify-center items-center">
-			{/* Contenedor superior */}
 			<div className='pb-20'>
 				<div className="flex-1 flex flex-col justify-center items-center">
 					{
@@ -25,8 +24,8 @@ export const Presentation = () => {
 								<br />
 								<h1 className={title({ size: "md" })}>desarrollador&nbsp;</h1>
 								<h1 className={title({ color: "cyan", size: "md" })}>Full-Stack&nbsp;</h1>
-								<h4 className={subtitle({ class: "mt-4" })}>
-									Un apasionado del desarrollo software en todas sus áreas.
+								<h4 className={subtitle({ class: "mt-4" })} style={{ maxWidth: '500px', margin: 'auto' }}>
+									{siteConfig.texts.resume.ES}
 								</h4>
 							</div>
 							:
@@ -37,8 +36,8 @@ export const Presentation = () => {
 								<br />
 								<h1 className={title({ size: "md" })}>Full-Stack&nbsp;</h1>
 								<h1 className={title({ color: "cyan", size: "md" })}>developer&nbsp;</h1>
-								<h4 className={subtitle({ class: "mt-4" })}>
-									A passionate software developer in all its aspects.
+								<h4 className={subtitle({ class: "mt-4 text-center" })} style={{ maxWidth: '500px', margin: 'auto' }}>
+									{siteConfig.texts.resume.EN}
 								</h4>
 							</div>
 
@@ -62,7 +61,7 @@ export const Presentation = () => {
 								href={siteConfig.links.linkedin}
 								className='mx-2 basis-1/2 w-full justify-center text-center items-center flex flex-row'
 							>
-								<Button color="primary" variant="bordered" className='w-full' startContent={<LinkedInIcon size={20} />}>
+								<Button style={{ borderColor: '#0077B5', color: '#0077B5' }} color="primary" variant="bordered" className='w-full' startContent={<LinkedInIcon size={20} />}>
 									LinkedIn
 								</Button>
 							</Link>
@@ -72,8 +71,40 @@ export const Presentation = () => {
 								href={siteConfig.links.github}
 								className='mx-2 basis-1/2 w-full justify-center text-center items-center flex flex-row'
 							>
-								<Button color="primary" variant="bordered" className='w-full' startContent={<GithubIcon size={20} />}>
+								<Button style={{ borderColor: '#fafbfc', color: '#fafbfc' }} color="primary" variant="bordered" className='w-full' startContent={<GithubIcon size={20} />}>
 									GitHub
+								</Button>
+							</Link>
+						</div>
+						<div className='w-full max-w-md flex flex-row'>
+							<Link
+								isExternal
+								as={NextLink}
+								href={siteConfig.links.youtube}
+								className='mx-2 basis-1/2 w-full justify-center text-center items-center flex flex-row'
+							>
+								<Button style={{ borderColor: '#FF0000', color: '#FF0000' }} variant="bordered" className='w-full' startContent={<InstagramIcon size={20} />}>
+									Youtube
+								</Button>
+							</Link>
+							<Link
+								isExternal
+								as={NextLink}
+								href={siteConfig.links.linkedin}
+								className='mx-2 basis-1/2 w-full justify-center text-center items-center flex flex-row'
+							>
+								<Button style={{ borderColor: '#E4405F', color: '#E4405F' }} variant="bordered" className='w-full' startContent={<InstagramIcon size={20} />}>
+									Instagram
+								</Button>
+							</Link>
+							<Link
+								isExternal
+								as={NextLink}
+								href={siteConfig.links.linkedin}
+								className='mx-2 basis-1/2 w-full justify-center text-center items-center flex flex-row'
+							>
+								<Button style={{ borderColor: '#ff0050', color: '#ff0050' }} variant="bordered" className='w-full' startContent={<InstagramIcon size={20} />}>
+									TikTok
 								</Button>
 							</Link>
 						</div>
