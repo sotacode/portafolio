@@ -68,14 +68,6 @@ export default function IndexPage() {
 				<SectionHome>
 					<ContactForm />
 				</SectionHome>				
-
-				{/* <div className="mt-8">
-					<Snippet hideSymbol hideCopyButton variant="bordered">
-						<span>
-							Get started by editing <Code color="primary">pages/index.tsx</Code>
-						</span>
-					</Snippet>
-				</div> */}
 			</section>
 		</>
 	);
