@@ -35,7 +35,7 @@ export const siteConfig = {
 		github: "https://github.com/sotacode",
 		twitter: "https://twitter.com/getnextui",
 		youtube: "https://www.youtube.com/@SotaCode",
-		instagram: "https://www.instagram.com/sotacod/",
+		instagram: "https://www.instagram.com/sotacode.dev/",
 		tiktok: "https://www.tiktok.com/@sota.code",
 		linkedin: "https://www.linkedin.com/in/nelson-rivera-navarrete/",
 	},

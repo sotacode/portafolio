@@ -90,7 +90,7 @@ export const Presentation = () => {
 							<Link
 								isExternal
 								as={NextLink}
-								href={siteConfig.links.linkedin}
+								href={siteConfig.links.instagram}
 								className='mx-2 basis-1/2 w-full justify-center text-center items-center flex flex-row'
 							>
 								<Button style={{ borderColor: '#E4405F', color: '#E4405F' }} variant="bordered" className='w-full' startContent={<InstagramIcon size={20} />}>
@@ -100,7 +100,7 @@ export const Presentation = () => {
 							<Link
 								isExternal
 								as={NextLink}
-								href={siteConfig.links.linkedin}
+								href={siteConfig.links.tiktok}
 								className='mx-2 basis-1/2 w-full justify-center text-center items-center flex flex-row'
 							>
 								<Button style={{ borderColor: '#ff0050', color: '#ff0050' }} variant="bordered" className='w-full' startContent={<InstagramIcon size={20} />}>
