@@ -29,7 +29,7 @@ export const Form = () => {
     if (validates.name && validates.email && validates.subject && validates.description) {
       setIsLoading(true);
       try {
-        fetch('https://wixb9n2fa4.execute-api.us-east-1.amazonaws.com/send-email', {
+        fetch('https://9imqujjq1g.execute-api.us-east-1.amazonaws.com/send-email', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -24,7 +24,7 @@ export const Presentation = () => {
 								<br />
 								<h1 className={title({ size: "md" })}>desarrollador&nbsp;</h1>
 								<h1 className={title({ color: "cyan", size: "md" })}>Full-Stack&nbsp;</h1>
-								<h4 className={subtitle({ class: "mt-4" })} style={{ maxWidth: '500px', margin: 'auto' }}>
+								<h4 className={subtitle({ class: "mt-4 pt-4" })} style={{ maxWidth: '500px', margin: 'auto' }}>
 									{siteConfig.texts.resume.ES}
 								</h4>
 							</div>
@@ -36,7 +36,7 @@ export const Presentation = () => {
 								<br />
 								<h1 className={title({ size: "md" })}>Full-Stack&nbsp;</h1>
 								<h1 className={title({ color: "cyan", size: "md" })}>developer&nbsp;</h1>
-								<h4 className={subtitle({ class: "mt-4 text-center" })} style={{ maxWidth: '500px', margin: 'auto' }}>
+								<h4 className={subtitle({ class: "mt-4 text-center pt-4" })} style={{ maxWidth: '500px', margin: 'auto' }}>
 									{siteConfig.texts.resume.EN}
 								</h4>
 							</div>

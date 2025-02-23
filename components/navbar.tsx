@@ -54,7 +54,7 @@ export const Navbar = () => {
 			<NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
 
 				<NavbarItem className="hidden sm:flex gap-2">
-					<Link href="https://wixb9n2fa4.execute-api.us-east-1.amazonaws.com/get-resume" isExternal>
+					<Link href="https://9imqujjq1g.execute-api.us-east-1.amazonaws.com/get-resume" isExternal>
 						<Button color="primary" startContent={<IoMdDownload />}>
 							<p>{siteConfig.download[ctxLanguage]}</p>
 						</Button>
