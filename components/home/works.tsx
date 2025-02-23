@@ -29,7 +29,7 @@ export const Works = () => {
             </div>
             <div className="gap-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 my-8 flex justify-center">
                 {list.map((item, index) => (
-                    <Card isFooterBlurred key={index} className="bg-black/10 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100 w-[350px]">
+                    <Card isFooterBlurred key={index} className="bg-black/10 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100 w-[350px] transition-transform duration-300 hover:scale-105">
                         <CardHeader className="bg-black/60 absolute z-10 flex-col items-start">
                             <div>
                                 {item.technologies.map((item, index) => (
