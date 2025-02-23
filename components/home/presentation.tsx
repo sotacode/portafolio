@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { LanguageContext } from '@/context/language/LanguageContext';
 import { Button, Link, Snippet } from '@nextui-org/react';
 import NextLink from 'next/link';
-import { GithubIcon, InstagramIcon, LinkedInIcon, YouTubeIcon } from '../icons';
+import { GithubIcon, InstagramIcon, LinkedInIcon, TikTokIcon, YouTubeIcon } from '../icons';
 import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from '@/config/site';
 
@@ -83,7 +83,7 @@ export const Presentation = () => {
 								href={siteConfig.links.youtube}
 								className='mx-2 basis-1/2 w-full justify-center text-center items-center flex flex-row'
 							>
-								<Button style={{ borderColor: '#FF0000', color: '#FF0000' }} variant="bordered" className='w-full' startContent={<InstagramIcon size={20} />}>
+								<Button style={{ borderColor: '#FF0000', color: '#FF0000' }} variant="bordered" className='w-full' startContent={<YouTubeIcon size={20} />}>
 									Youtube
 								</Button>
 							</Link>
@@ -103,7 +103,7 @@ export const Presentation = () => {
 								href={siteConfig.links.tiktok}
 								className='mx-2 basis-1/2 w-full justify-center text-center items-center flex flex-row'
 							>
-								<Button style={{ borderColor: '#ff0050', color: '#ff0050' }} variant="bordered" className='w-full' startContent={<InstagramIcon size={20} />}>
+								<Button style={{ borderColor: '#ff0050', color: '#ff0050' }} variant="bordered" className='w-full' startContent={<TikTokIcon size={20} />}>
 									TikTok
 								</Button>
 							</Link>
