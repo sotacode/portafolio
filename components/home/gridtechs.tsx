@@ -13,7 +13,7 @@ export default function GridTechs() {
         {
           list.map((item, index) => (
                 <div className="flex" key={index}>
-                  <Card shadow="sm" isPressable className="m-1">
+                  <Card shadow="sm" className="m-1 transition-transform duration-300 hover:scale-110">
                     <CardBody className="overflow-visible p-0 flex items-center justify-center">
                       <Image
                         as={NextImage}
