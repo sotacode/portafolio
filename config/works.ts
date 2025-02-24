@@ -4,6 +4,19 @@ export type SiteConfig = typeof works;
 export const works = {
     list: [
         {
+            key: "Osmoz",
+            technologies: ["Nextjs","NextUI", "Tailwind"],
+            title: "Osmoz - MechanicProblem Solver",
+            resumen: {
+                ES: "Pagina que despliega servicios, booking y contacto para un taller mecánico.",
+                EN: "Website that displays services, booking and contact for a mechanic workshop."
+            },
+            detail: "",
+            url: "https://osmoz.vercel.app/",
+            github: "https://github.com/sotacode/oscarfront",
+            img: "/home/osmoz.png",
+        },
+        {
             key: "ValorantInfo",
             technologies: ["Nextjs","NextUI", "Tailwind"],
             title: "Valorant Info",
@@ -16,19 +29,19 @@ export const works = {
             github: "https://github.com/sotacode/valorantinfo",
             img: "/home/valoinfo.png",
         },
-        {
-            key: "portfolio",
-            technologies: ["Nextjs","NextUI", "Tailwind"],
-            title: "SotaCode Web",
-            resumen: {
-                ES: "Es básicamente esta misma página, aquí muestro mis habilidades.",
-                EN: "It's basically this same page where I showcase my skills."
-            },
-            detail: "",
-            url: "https://www.nelsota.com/",
-            github: "https://github.com/sotacode/portafolio",
-            img: "/home/webpagesotacode.png",
-        },
+        // {
+        //     key: "portfolio",
+        //     technologies: ["Nextjs","NextUI", "Tailwind"],
+        //     title: "SotaCode Web",
+        //     resumen: {
+        //         ES: "Es básicamente esta misma página, aquí muestro mis habilidades.",
+        //         EN: "It's basically this same page where I showcase my skills."
+        //     },
+        //     detail: "",
+        //     url: "https://www.nelsota.com/",
+        //     github: "https://github.com/sotacode/portafolio",
+        //     img: "/home/webpagesotacode.png",
+        // },
         {
             key: "heroesapp",
             technologies: ["Reactjs", "Vite"],
