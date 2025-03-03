@@ -34,8 +34,8 @@ export const Presentation = () => {
 								<h1 className={title({ size: "lg", color: "cyan" })}>Nelson Rivera</h1>
 								<h1 className={title({ size: "md" })}>,</h1>
 								<br />
-								<h1 className={title({ size: "md" })}>Full-Stack&nbsp;</h1>
-								<h1 className={title({ color: "cyan", size: "md" })}>developer&nbsp;</h1>
+								<h1 className={title({ color: "cyan", size: "md" })}>Full-Stack&nbsp;</h1>
+								<h1 className={title({ size: "md" })}>developer&nbsp;</h1>
 								<h4 className={subtitle({ class: "mt-4 text-center pt-4" })} style={{ maxWidth: '500px', margin: 'auto' }}>
 									{siteConfig.texts.resume.EN}
 								</h4>
