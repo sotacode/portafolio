@@ -44,7 +44,7 @@ export const Presentation = () => {
 					}
 					<div className="flex mt-4 justify-center">
 						<Image
-							src="/home/sotacode.png"
+							src="/home/sotacode.webp"
 							alt="Picture of the"
 							width={650}
 							height={650}

@@ -33,15 +33,16 @@ export default function IndexPage() {
 				</div>
 
 				<SectionHome>
-					<AboutMe />
+					<Works />
 				</SectionHome>
 
 				<div className="w-1/3 pb-4">
 					<Divider />
 				</div>
 
+				
 				<SectionHome>
-					<Technologies />
+					<AboutMe />
 				</SectionHome>
 
 
@@ -50,7 +51,7 @@ export default function IndexPage() {
 				</div>
 
 				<SectionHome>
-					<Works />
+					<Technologies />
 				</SectionHome>
 
 				<div className="w-1/3 pt-5 pb-10">

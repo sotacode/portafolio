@@ -23,12 +23,12 @@ export const TimelineExperience = () => {
                         </div>
                 }
             </div>
-            <ol className="relative border-s border-slate-300 mx-1">
+            <ol className="relative border-s border-cyan-500 mx-1">
                 {
                     experience[language].map((work, index) => (
                         <li className="mb-10 ms-6" key={index}>
-                            <span className="absolute flex items-center justify-center w-6 h-6 bg-slate-200 rounded-full -start-3 ring-8 ring-slate-200">
-                                <FaCalendarMinus color='#01cfea' size={20} />
+                            <span className="absolute flex items-center justify-center w-6 h-6 bg-cyan-500 rounded-full -start-3 ring-8 ring-cyan-500">
+                                <FaCalendarMinus color='#F5F5F5' size={20} />
                             </span>
                             <div className='flex text-center items-center'>
                                 <h3 className="flex items-center mb-1 text-lg font-semibold pl-3">{work.position}</h3>

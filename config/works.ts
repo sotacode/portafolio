@@ -14,7 +14,7 @@ export const works = {
             detail: "",
             url: "https://osmoz.vercel.app/",
             github: "https://github.com/sotacode/oscarfront",
-            img: "/home/osmoz.png",
+            img: "/home/osmoz.webp",
         },
         {
             key: "ValorantInfo",
@@ -27,7 +27,7 @@ export const works = {
             detail: "",
             url: "https://sotacode-valorantinfo.vercel.app/",
             github: "https://github.com/sotacode/valorantinfo",
-            img: "/home/valoinfo.png",
+            img: "/home/valoinfo.webp",
         },
         // {
         //     key: "portfolio",
@@ -40,7 +40,7 @@ export const works = {
         //     detail: "",
         //     url: "https://www.nelsota.com/",
         //     github: "https://github.com/sotacode/portafolio",
-        //     img: "/home/webpagesotacode.png",
+        //     img: "/home/webpagesotacode.webp",
         // },
         {
             key: "heroesapp",
@@ -53,7 +53,7 @@ export const works = {
             detail: "",
             url: "https://heroesaplicationsotacode.netlify.app/",
             github: "https://github.com/sotacode/heroesapp",
-            img: "/home/heroesbg.jpg",
+            img: "/home/heroesbg.webp",
         },
         {
             key: "sotagiphy",
@@ -66,7 +66,7 @@ export const works = {
             detail: "",
             url: "https://sotagiphy.netlify.app/",
             github: "https://github.com/sotacode/sota-giphy",
-            img: "/home/giphy.jpg",
+            img: "/home/giphy.webp",
         },
         {
             key: "localbd",
@@ -79,7 +79,7 @@ export const works = {
             detail: "",
             url: "",
             github: "https://github.com/sotacode/postgres-pgadmin-docker-compose",
-            img: "/home/dockercompose.jpg",
+            img: "/home/dockercompose.webp",
         },
         {
             key: "learnreact",
@@ -92,7 +92,7 @@ export const works = {
             detail: "",
             url: "https://sotageneralhooks.netlify.app/",
             github: "https://github.com/sotacode/react-hooks",
-            img: "/home/reacthooks.png",
+            img: "/home/reacthooks.webp",
         },
     ]
 }
