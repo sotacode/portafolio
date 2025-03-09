@@ -16,7 +16,7 @@ export default function DefaultLayout({
 		<div className={`${tektur.className} antialiased flex flex-col`}>
 			<Head />
 			<Navbar />
-			<main className="container max-w-7xl px-6 flex-grow my-8">
+			<main className="container max-w-7xl px-6 flex-grow my-8 mx-auto">
 				{children}
 			</main>
 			<footer className="w-full flex items-center justify-center py-4">

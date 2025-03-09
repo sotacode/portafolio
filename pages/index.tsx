@@ -1,10 +1,3 @@
-import NextLink from "next/link";
-import { Link } from "@nextui-org/link";
-import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon, InstagramIcon, LinkedInIcon } from "@/components/icons";
-import DefaultLayout from "@/layouts/default";
 import { Presentation } from "@/components/home/presentation";
 import { Divider } from "@nextui-org/react";
 import SectionHome from "@/layouts/sectionhome";
