@@ -66,7 +66,7 @@ export const works = {
             detail: "",
             url: "",
             github: "https://github.com/sotacode/postgres-pgadmin-docker-compose",
-            img: "/home/dockercompose.webp",
+            img: "/home/pgadmin-layout.webp",
         },
         // {
         //     key: "learnreact",
