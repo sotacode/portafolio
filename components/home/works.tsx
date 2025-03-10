@@ -14,7 +14,15 @@ export const Works = () => {
 
     return (
         <>
-            <div className="flex-1 flex flex-col justify-center items-center ">
+            <motion.div
+                initial={{ opacity: 0, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{
+                    duration: 0.2,
+                    ease: "easeOut"
+                }}
+            >
                 {
                     language == "ES" ?
                         <div className="text-center">
@@ -27,7 +35,8 @@ export const Works = () => {
                             <h1 className={title({ color: "cyan" })}>Work&nbsp;</h1>
                         </div>
                 }
-            </div>
+            </motion.div>
+
             <div className="gap-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-1 my-8 flex justify-center">
                 {list.map((item, index) => (
                     <motion.div
@@ -36,7 +45,7 @@ export const Works = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{
-                            duration: 0.5,
+                            duration: 0.2,
                             //delay: index * 0.2,
                             ease: "easeOut"
                         }}
@@ -60,10 +69,10 @@ export const Works = () => {
                                     </div>
 
                                     <div className="flex flex-col justify-start h-full">
-                                        <h4 className="text-white/90 font-medium text-2xl blur-none">{item.title}</h4>
+                                        <h4 className="text-primary font-medium text-2xl blur-none">{item.title}</h4>
                                         <div className="flex flex-grow gap-2 items-start">
                                             <div className="flex flex-col">
-                                                <p className="text-lg text-white/60">{item.resumen[language]}</p>
+                                                <p className="text-lg text-[#ecedee]">{item.resumen[language]}</p>
                                             </div>
                                         </div>
                                         <div className="flex flex-col gap-2">

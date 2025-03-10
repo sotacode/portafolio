@@ -2,13 +2,21 @@ import React from "react";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import { technologies } from "@/config/technologies";
 import NextImage from "next/image";
-
+import { motion } from 'framer-motion';
 
 export default function GridTechs() {
   const { list } = technologies;
 
   return (
-
+<motion.div
+                        initial={{ opacity: 0, y: 0 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{
+                            duration: 0.2,
+                            ease: "easeOut"
+                        }}
+                    >
       <div className="gap-2 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-7 my-10 flex justify-center">
         {
           list.map((item, index) => (
@@ -34,6 +42,7 @@ export default function GridTechs() {
           ))
         }
       </div>
+      </motion.div>
 
   );
 }
