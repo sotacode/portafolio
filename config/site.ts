@@ -1,9 +1,13 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "SotaCode",
-	description: "Hola!, Soy Nelson Rivera, aquí encontrarás mi perfil profesional donde muestro mis trabajos personales.",
+	name: "SotaCode - Nelson Rivera",
+	description: "Hola!, Soy Nelson Rivera/SotaCode, aquí encontrarás mi perfil profesional donde muestro mis trabajos personales.",
 	texts: {
+		description: {
+			ES: "Hola!, Soy Nelson Rivera/SotaCode, aquí encontrarás mi perfil profesional donde muestro mis trabajos personales.",
+			EN: "Hey! I'm Nelson Rivera/SotaCode. Here, you'll find my professional profile where I showcase my personal projects."
+		},
 		resume: {
 			ES: "Un apasionado del desarrollo software en todas sus áreas, dedicado a compartir mis conocimientos y experiencias.",
 			EN: "A passionate software developer in all aspects, dedicated to sharing my knowledge and experiences."
